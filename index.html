@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>박스 열기</title>
+        <style>
+            body {
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center; padding: 50px;">
+            <h1>상자를 열어보세요</h1>
+                <input class="btn" type="image" name="button" id="img_box1" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box2" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box3" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box4" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box5" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box6" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box7" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box8" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box9" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box10" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box11" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box12" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box13" src="BoxClosed.png" onclick="openBox(id)">
+                <input class="btn" type="image" name="button" id="img_box14" src="BoxClosed.png" onclick="openBox(id)">
+            <style>
+                .btn:active{
+                    margin-top: 5px;
+                    margin-bottom: -5px;
+                    src: "BoxOpened.png";
+                }
+            </style>
+            <script>
+                var clickCount = 0;
+                function openBox(id) {
+                        clickCount++;
+                        document.getElementById(id).src = "BoxOpened.png";
+                }
+            </script>
+        </div>
+    </body>
+</html>
