@@ -19,8 +19,8 @@
     <body>
         <div style="text-align:center; padding: 50px;" id="btn_group">
             <h1>상자를 열어보세요</h1>
-            <div id="countText">
-                0
+            <div>
+                <h2 id="countText">0</h2>
             </div>
                 <input class="btn" type="image" name="button" id="img_box1" src="BoxClosed.png" onclick="openBox(id)">
                 <input class="btn" type="image" name="button" id="img_box2" src="BoxClosed.png" onclick="openBox(id)">
@@ -50,10 +50,15 @@
                 var clickCount = 0;
                 function openBox(id) {
                     if(document.getElementById(id).getAttribute("src")=="BoxClosed.png"){
-                    clickCount = clickCount + 1;
-                    document.getElementById(id).src = "BoxOpened.png";
-                    document.getElementById("countText").innerText = clickCount;
+                        clickCount = clickCount + 1;
+                        document.getElementById(id).src = "BoxOpened.png";
+                        document.getElementById("countText").innerText = clickCount;
+                        setTimeout(()=>ShowApple(id), 500);
                     }
+                }
+                function ShowApple(id) {
+                    var index = parseInt(id.replace("img_box",''));
+                    document.getElementById(id).src = "Apple" + index + ".png";
                 }
             </script>
         </div>
