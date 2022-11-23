@@ -41,9 +41,11 @@
                 }
             </style>
             <script>
+                var IsOpening = false;
                 var clickCount = 0;
                 function openBox(id) {
-                    if(document.getElementById(id).getAttribute("src")=="BoxClosed.png"){
+                    if(document.getElementById(id).getAttribute("src")=="BoxClosed.png" && !IsOpening){
+                        IsOpening = true;
                         clickCount = clickCount + 1;
                         document.getElementById(id).src = "BoxOpened.png";
                         document.getElementById("countText").innerText = clickCount;
@@ -53,6 +55,7 @@
                 function ShowApple(id, count) {
                     //var index = parseInt(id.replace("img_box",''));
                     document.getElementById(id).src = "Apple" + count + ".png";
+                    IsOpening = false;
                 }
             </script>
         </div>
