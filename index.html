@@ -6,12 +6,6 @@
             body {
                 background-color: #ffffff;
             }
-            #btn_group button{
-            border: 1px solid skyblue;
-            background-color: rgba(0,0,0,0);
-            color: skyblue;
-            padding: 5px;
-            }
         </style>
         <script>
         </script>
@@ -22,9 +16,6 @@
             <div>
                 <h2 id="countText">0</h2>
             </div>
-                <button>
-                    <img>
-                </button>
                 <input class="btn" type="image" name="button" id="img_box1" src="BoxClosed.png" onclick="openBox(id)">
                 <input class="btn" type="image" name="button" id="img_box2" src="BoxClosed.png" onclick="openBox(id)">
                 <input class="btn" type="image" name="button" id="img_box3" src="BoxClosed.png" onclick="openBox(id)">
@@ -56,7 +47,7 @@
                         clickCount = clickCount + 1;
                         document.getElementById(id).src = "BoxOpened.png";
                         document.getElementById("countText").innerText = clickCount;
-                        setTimeout(()=>ShowApple(id, clickCount), 500);
+                        setTimeout(()=>ShowApple(id, clickCount), 400);
                     }
                 }
                 function ShowApple(id, count) {
