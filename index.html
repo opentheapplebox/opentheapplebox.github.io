@@ -6,12 +6,20 @@
             body {
                 background-color: #ffffff;
             }
+            #btn_group button{
+            border: 1px solid skyblue;
+            background-color: rgba(0,0,0,0);
+            color: skyblue;
+            padding: 5px;
+            }
         </style>
     </head>
     <body>
-        <div style="text-align:center; padding: 50px;">
+        <div style="text-align:center; padding: 50px;" id="btn_group">
             <h1>상자를 열어보세요</h1>
-                <input class="btn" type="image" name="button" id="img_box1" src="BoxClosed.png" onclick="openBox(id)">
+                <button class="btn" type="image" name="button" id="img_box1" src="BoxClosed.png" onclick="openBox(id)">
+                    <img src="BoxClosed.png" alt="">
+                </button>
                 <input class="btn" type="image" name="button" id="img_box2" src="BoxClosed.png" onclick="openBox(id)">
                 <input class="btn" type="image" name="button" id="img_box3" src="BoxClosed.png" onclick="openBox(id)">
                 <input class="btn" type="image" name="button" id="img_box4" src="BoxClosed.png" onclick="openBox(id)">
@@ -30,6 +38,9 @@
                     margin-top: 5px;
                     margin-bottom: -5px;
                     src: "BoxOpened.png";
+                }
+                .btn{
+                    -webkit-tap-highlight-color :transparent;
                 }
             </style>
             <script>
